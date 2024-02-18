@@ -1,0 +1,50 @@
+create new user:
+(post)http://localhost:6000/api/user
+{
+    "name": "*****",
+    "password": "*****",
+    "age": ***,
+    "address": {
+        "city": "*****",
+        "street": "*****"
+    }
+}
+
+//////////////////////////////////
+create new author:
+(post)http://localhost:6000/api/crud/author
+{
+    "name": "*****"
+}
+
+//////////////////////////////////
+adding new book:
+(post)http://localhost:6000/api/book
+{
+    "title": "*****",
+    "amount": ***,
+    "author": 1,
+    "category": []
+}
+# Category isnt a must, its an option - if there isnt a category created with that name it will create it by itself
+
+//////////////////////////////////
+create new order
+(post)http://localhost:6000/api/order
+{
+    "bookName": "moshe",
+    "amount": 5,
+    "userId": 1
+}
+
+//////////////////////////////////
+get all books by category name
+(get)http://localhost:6000/api/category/****
+
+//////////////////////////////////
+delete/edit something:
+(delete/edit)http://localhost:6000/api/crud/****/:id
+
+//////////////////////////////////
+find all orders for a certain user
+http://localhost:6000/api/user/:id
